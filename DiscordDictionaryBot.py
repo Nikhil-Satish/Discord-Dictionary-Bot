@@ -1,6 +1,6 @@
+from asyncio.windows_events import NULL
 import discord
 import requests
-import random
 from discord import channel
 
 from discord.message import Message
@@ -57,6 +57,8 @@ def pos(word):
             meanings = array['meanings']
             for item in meanings:
                 partOfSpeech = item['partOfSpeech']
+                if posList.find(partOfSpeech) != -1:
+                    continue
                 posList += partOfSpeech
                 posList += '\n'
     return posList
@@ -69,13 +71,18 @@ def allDetails(word):
         if array['word'] == dict['word']:
             phonetics = array['phonetics']
             for item in phonetics:
-                all += '\nPhonetics text : '+item['text']
-                all += '\nPhonetics audio : '+item['audio']
-            origins = array['origin']
-            all += '\nOrigin : '+origins
+                if all.find(item['text']) == -1:
+                    all += '\nPhonetics text : '+item['text']
+                if all.find(item['audio']) == -1:
+                    all += '\nPhonetics audio : '+item['audio']
+            if array.get('origin') != None:
+                origins = array['origin']
+                all += '\nOrigin : '+origins
             meanings = array['meanings']
             for item in meanings:
                 partOfSpeech = item['partOfSpeech']
+                if all.find(partOfSpeech) != -1:
+                    continue
                 all += '\nPart of Speech : '+partOfSpeech
                 definitions = item['definitions']
                 for element in definitions:
@@ -83,11 +90,12 @@ def allDetails(word):
                     synonyms = element['synonyms']
                     all += '\nSynonyms : '
                     for k in synonyms:
-                        all += '\n'+k
+                        all += k+' '
                     antonyms = element['antonyms']
                     all += '\nAntonyms : '
                     for k in antonyms:
-                        all += '\n'+k
+                        all += k+' '
+        all += '\n'
     return all
 
 
