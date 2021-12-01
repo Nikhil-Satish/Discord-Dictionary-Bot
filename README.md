@@ -14,4 +14,4 @@ This is a Discord Dictionary bot project in python which serves as a simple word
 5. Enter a task command and the bot responds with the required details.
 
 ## Demo video
-https://drive.google.com/file/d/158CnlJ8ZNocVZnOATbI0BZVZO0QH2mzN/view?usp=sharing
+https://drive.google.com/file/d/1l_QrHa6kt9zws5k79eX3hVrOeOgupigo/view?usp=sharing
