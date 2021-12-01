@@ -12,3 +12,6 @@ This is a Discord Dictionary bot project in python which serves as a simple word
 3. Enter 'Hello' or directly type in the word you want to search the details of.
 4. The bot responds with the menu-options to ask for what the user specifically wants.
 5. Enter a task command and the bot responds with the required details.
+
+## Demo video
+https://drive.google.com/file/d/158CnlJ8ZNocVZnOATbI0BZVZO0QH2mzN/view?usp=sharing
