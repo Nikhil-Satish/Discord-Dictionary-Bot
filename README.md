@@ -1,5 +1,5 @@
 # Discord-Dictionary-Bot
-This is a Discord Dictionary bot project in python which serves as a simple word dictionary by enabling users to find the definitions,synonyms and other details of any word. 
+One of the most unique features of the multi-level communication platform Discord is its bots. Discord bots are AIs that can perform a number of useful automated tasks and bot commands on a server, such as welcoming new members, moderating content, and banning rule breakers.Bots are a great way to make our server more organized, fun, and interactive.This is a Discord Dictionary bot project in python which serves as a simple word dictionary by enabling users to find the definitions,synonyms and other details of any word.The user has to send the word as a chat in the channel and the bot replies with the meaning, synonyms and other details of the word.
 
 ## Set-up Instructions
 1. Create a discord server and create a channel named 'discord-bot' in it.
